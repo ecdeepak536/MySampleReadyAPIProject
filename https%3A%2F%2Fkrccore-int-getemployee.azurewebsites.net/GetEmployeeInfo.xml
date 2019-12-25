@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="GetEmployeeInfo" path="/api/GetEmployeeInfo" id="a43e0adb-cc0b-46b1-a2f0-c0e5abd26dac" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="GetEmployeeInfo" path="/api/GetEmployeeInfo" id="a43e0adb-cc0b-46b1-a2f0-c0e5abd26dac" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="a43e0adb-cc0b-46b1-a2f0-c0e5abd26dacfileName">GetEmployeeInfo</con:setting>
   </con:settings>
@@ -74,6 +74,7 @@
       <con:request/>
       <con:originalUri>https://krccore-int-getemployee.azurewebsites.net/api/GetEmployeeInfo</con:originalUri>
       <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
