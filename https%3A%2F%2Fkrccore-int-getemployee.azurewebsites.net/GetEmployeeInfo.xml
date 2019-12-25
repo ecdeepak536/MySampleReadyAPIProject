@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="GetEmployeeInfo" path="/api/GetEmployeeInfo" id="a43e0adb-cc0b-46b1-a2f0-c0e5abd26dac" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a43e0adb-cc0b-46b1-a2f0-c0e5abd26dacfileName">GetEmployeeInfo</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="" id="ded0f299-eeb9-4b7a-936c-3b662d64e372" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>fname</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>lname</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>key</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>type</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>status</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>region</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:get="https://krccore-int-getemployee.azurewebsites.net/api/GetEmployeeInfo">get:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:get="https://krccore-int-getemployee.azurewebsites.net/api/GetEmployeeInfo">get:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="49035457-56a1-4af1-821f-96ef25e8bf94" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="X-Version" value="v1"/>
+  <con:entry key="X-SourceApp" value="KIMSF"/>
+  <con:entry key="SessionId" value="test"/>
+  <con:entry key="X-Token" value="9r0D_?tB|x+C8-Basanti"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting>
+      </con:settings>
+      <con:endpoint>https://krccore-int-getemployee.azurewebsites.net</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://krccore-int-getemployee.azurewebsites.net/api/GetEmployeeInfo</con:originalUri>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="fname" value="Sama"/>
+        <con:entry key="lname" value="Abdulhalim"/>
+        <con:entry key="type" value="Full Time"/>
+        <con:entry key="region" value="Northeast"/>
+        <con:entry key="key" value="1"/>
+        <con:entry key="status" value="Active"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>fname</con:entry>
+        <con:entry>lname</con:entry>
+        <con:entry>key</con:entry>
+        <con:entry>type</con:entry>
+        <con:entry>status</con:entry>
+        <con:entry>region</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

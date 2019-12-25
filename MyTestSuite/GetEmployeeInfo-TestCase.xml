@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="12aedfdf-1bdb-437b-9465-ec13ccbccb44" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetEmployeeInfo TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [GetEmployeeInfo] located at [/api/GetEmployeeInfo]</con:description>
+  <con:settings>
+    <con:setting id="12aedfdf-1bdb-437b-9465-ec13ccbccb44fileName">GetEmployeeInfo-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSource" id="a3ecec5e-2658-4422-ada6-bc3539b9a335">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>D:/Samata/ReadyAPI/DataSource/MyFile.xlsx</file>
+          <worksheet/>
+          <cell>A2</cell>
+          <ignoreEmpty>false</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>FirstName</con:property>
+      <con:property>LastName</con:property>
+      <con:property>Region</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Request 1" id="578f6f8d-65a4-4611-b90b-f84e3681bd3b">
+    <con:settings/>
+    <con:config service="https://krccore-int-getemployee.azurewebsites.net" resourcePath="/api/GetEmployeeInfo" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="49035457-56a1-4af1-821f-96ef25e8bf94" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="X-Version" value="v1"/>
+  <con:entry key="X-SourceApp" value="KIMSF"/>
+  <con:entry key="SessionId" value="test"/>
+  <con:entry key="X-Token" value="9r0D_?tB|x+C8-Basanti"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting>
+        </con:settings>
+        <con:endpoint>https://krccore-int-getemployee.azurewebsites.net</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://krccore-int-getemployee.azurewebsites.net/api/GetEmployeeInfo</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="4fbdaeb9-97ec-411d-bf01-7ac16973a44a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="fname" value="${DataSource#FirstName}"/>
+          <con:entry key="lname" value="${DataSource#LastName}"/>
+          <con:entry key="type" value="Full Time"/>
+          <con:entry key="region" value="${DataSource#Region}"/>
+          <con:entry key="key" value="1"/>
+          <con:entry key="status" value="Active"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>fname</con:entry>
+          <con:entry>lname</con:entry>
+          <con:entry>key</con:entry>
+          <con:entry>type</con:entry>
+          <con:entry>status</con:entry>
+          <con:entry>region</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>a3ecec5e-2658-4422-ada6-bc3539b9a335</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

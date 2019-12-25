@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="0fbf5e54-3a94-4eee-ab73-1d3d8d687b47" name="MyTestSuite" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test suite generated for the REST service [https://krccore-int-getemployee.azurewebsites.net]</con:description>
+  <con:settings>
+    <con:setting id="0fbf5e54-3a94-4eee-ab73-1d3d8d687b47fileName">MyTestSuite</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>
