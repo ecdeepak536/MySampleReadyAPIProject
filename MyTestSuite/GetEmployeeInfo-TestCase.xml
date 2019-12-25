@@ -19,9 +19,9 @@
       </con:dataSource>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
-      <con:property>FirstName</con:property>
-      <con:property>LastName</con:property>
-      <con:property>Region</con:property>
+      <con:property>DS_FirstName</con:property>
+      <con:property>DS_LastName</con:property>
+      <con:property>DS_Region</con:property>
       <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
@@ -54,10 +54,10 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="fname" value="${DataSource#FirstName}"/>
-          <con:entry key="lname" value="${DataSource#LastName}"/>
+          <con:entry key="fname" value="${DataSource#DS_FirstName}"/>
+          <con:entry key="lname" value="${DataSource#DS_LastName}"/>
           <con:entry key="type" value="Full Time"/>
-          <con:entry key="region" value="${DataSource#Region}"/>
+          <con:entry key="region" value="${DataSource#DS_Region}"/>
           <con:entry key="key" value="1"/>
           <con:entry key="status" value="Active"/>
         </con:parameters>
